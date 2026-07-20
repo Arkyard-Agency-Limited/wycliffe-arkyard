@@ -325,25 +325,24 @@ h2{font-size:clamp(1.8rem,3.8vw,3rem);font-weight:800;line-height:1.02;letter-sp
 .pf-thresh-chip::before{content:'✓';color:var(--red);font-weight:800}
 .pf-note{font-size:.72rem;color:var(--muted);margin-top:1.2rem;max-width:900px;line-height:1.6}
 
-/* ── Growth Engine framework slide ── */
-.engine-wrap{max-width:1320px;margin-top:1.7rem;width:100%}
-.engine-outcome{background:rgba(232,64,64,.08);border:1px solid rgba(232,64,64,.28);border-radius:14px;padding:1.2rem 1.6rem;margin-bottom:1.2rem;display:flex;align-items:center;justify-content:space-between;gap:1.5rem;flex-wrap:wrap}
-.engine-outcome-txt{max-width:560px}
-.engine-outcome-label{font-size:.6rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--red)}
-.engine-outcome h3{font-size:1.35rem;margin:.3rem 0 .35rem;color:var(--off);font-weight:800}
-.engine-outcome p{font-size:.8rem;color:var(--mid);margin:0;line-height:1.5}
-.engine-outcome-tools{display:flex;flex-wrap:wrap;gap:.5rem;justify-content:flex-end;max-width:420px}
-.engine-outcome-tools span{font-size:.64rem;font-weight:700;background:rgba(232,64,64,.14);color:#ff8a8a;padding:.35rem .75rem;border-radius:20px;white-space:nowrap}
-.engine-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:.8rem}
-.engine-card{background:rgba(255,255,255,.03);border:1px solid var(--dkb);border-radius:12px;padding:.95rem 1rem;display:flex;flex-direction:column;gap:.4rem}
-.engine-card-tag{display:inline-flex;align-self:flex-start;font-size:.54rem;font-weight:800;letter-spacing:.05em;text-transform:uppercase;padding:.22rem .55rem;border-radius:20px}
-.engine-card-tag.owned{background:rgba(232,64,64,.14);color:#ff8a8a}
-.engine-card-tag.influenced{background:rgba(110,170,146,.16);color:#8fc7ae}
-.engine-card h4{font-size:.98rem;color:var(--off);margin:.1rem 0 0;font-weight:800}
-.engine-card-svc{font-size:.64rem;color:var(--muted);font-weight:700;margin-top:-.3rem}
-.engine-card p{font-size:.7rem;color:var(--mid);line-height:1.45;margin:0}
-.engine-card-tools{display:flex;flex-wrap:wrap;gap:.3rem;margin-top:.1rem}
-.engine-card-tools span{font-size:.58rem;color:var(--muted);background:rgba(255,255,255,.05);padding:.18rem .45rem;border-radius:10px}
+/* ── Three apart (campaign framework pillars) ── */
+.apart{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1px;background:var(--dkb);margin-top:1.8rem}
+.ap{padding:2.2rem 1.8rem;background:#111110;position:relative;overflow:hidden}
+.ap::before{content:attr(data-n);position:absolute;top:-.15em;right:.15em;font-size:6rem;font-weight:800;line-height:1;opacity:.06;letter-spacing:-.04em;pointer-events:none}
+.ap-r{border-top:2px solid var(--red)}.ap-t{border-top:2px solid var(--teal)}.ap-a{border-top:2px solid var(--amber)}
+.ap-n{font-size:.65rem;letter-spacing:.12em;font-weight:800;margin-bottom:1rem;position:relative;padding-left:17px}
+.ap-r .ap-n{color:var(--red)}.ap-t .ap-n{color:var(--teal)}.ap-a .ap-n{color:var(--amber)}
+.ap-n::before{content:"";position:absolute;left:0;top:50%;width:8px;height:8px;border-radius:50%;background:currentColor;transform:translateY(-50%);animation:pillarPulse 2.2s ease-in-out infinite}
+.ap:nth-child(2) .ap-n::before{animation-delay:.45s}
+.ap:nth-child(3) .ap-n::before{animation-delay:.9s}
+@keyframes pillarPulse{0%,100%{opacity:1;transform:translateY(-50%) scale(1)}50%{opacity:.35;transform:translateY(-50%) scale(1.55)}}
+.ap h3{font-size:1.05rem;font-weight:800;margin-bottom:.65rem;line-height:1.15;letter-spacing:-.01em;position:relative}
+.ap p{font-size:.82rem;color:var(--mid);line-height:1.65;position:relative;min-height:8.5rem}
+.ap::before{animation:ghostBreathe 5s ease-in-out infinite}
+@keyframes ghostBreathe{0%,100%{opacity:.06}50%{opacity:.13}}
+@media (prefers-reduced-motion:reduce){
+  .ap-n::before,.ap::before{animation:none;opacity:1}
+}
 
 @media(max-width:760px){
   .split-cover{grid-template-columns:1fr}
@@ -355,9 +354,7 @@ h2{font-size:clamp(1.8rem,3.8vw,3rem);font-weight:800;line-height:1.02;letter-sp
   .perf-cols{grid-template-columns:1fr;gap:1.6rem}
   .perf-answer{grid-template-columns:1fr}
   .roadmap-top{flex-direction:column;align-items:flex-start;gap:.6rem}
-  .engine-grid{grid-template-columns:1fr}
-  .engine-outcome{flex-direction:column;align-items:flex-start}
-  .engine-outcome-tools{justify-content:flex-start;max-width:none}
+  .apart{grid-template-columns:1fr}
 }
 </style>
 </head>
@@ -868,63 +865,6 @@ h2{font-size:clamp(1.8rem,3.8vw,3rem);font-weight:800;line-height:1.02;letter-sp
   <div class="slide-num" style="color:var(--muted)">16 / 19</div>
 </section>
 
-<!-- ============ SLIDE 16b — How everything connects (Growth Engine) ============ -->
-<section class="dk" id="s17" data-surface="dark">
-  <div class="ey">Our approach</div>
-  <h2>How everything connects.</h2>
-  <p class="body perf-intro">Five levers, one outcome — here's how the parts of the Growth Engine we manage feed back into new donor growth.</p>
-  <div class="engine-wrap">
-    <div class="engine-outcome">
-      <div class="engine-outcome-txt">
-        <div class="engine-outcome-label">Primary outcome</div>
-        <h3>Mission impact</h3>
-        <p>Every decision points here: more people moved to support your mission, at lower cost, with higher lifetime value.</p>
-      </div>
-      <div class="engine-outcome-tools">
-        <span>Total donation revenue</span><span>Cost per acquired donor</span><span>Donor lifetime value</span><span>Retention rate</span>
-      </div>
-    </div>
-    <div class="engine-grid">
-      <div class="engine-card">
-        <div class="engine-card-tag owned">Arkyard owned</div>
-        <h4>Understand</h4>
-        <div class="engine-card-svc">Data &amp; measurement</div>
-        <p>GTM, GA4 and CRM data stitched together — so we know not just what clicked, but what gave and what stayed.</p>
-        <div class="engine-card-tools"><span>GA4 &amp; GTM</span><span>CRM integration</span><span>Looker Studio</span></div>
-      </div>
-      <div class="engine-card">
-        <div class="engine-card-tag owned">Arkyard owned</div>
-        <h4>Reach</h4>
-        <div class="engine-card-svc">Paid media</div>
-        <p>Right message, right people, right moment — paid social continuously iterated, Google Grants included.</p>
-        <div class="engine-card-tools"><span>Meta Ads</span><span>Google Ads</span><span>Google Grants</span></div>
-      </div>
-      <div class="engine-card">
-        <div class="engine-card-tag owned">Arkyard owned</div>
-        <h4>Convert</h4>
-        <div class="engine-card-svc">Conversion optimisation</div>
-        <p>Removing friction between caring and giving. Quant finds the drop-offs, research reveals the why.</p>
-        <div class="engine-card-tools"><span>Heuristic review</span><span>User testing</span><span>A/B experiments</span></div>
-      </div>
-      <div class="engine-card">
-        <div class="engine-card-tag influenced">Influenced</div>
-        <h4>Connect</h4>
-        <div class="engine-card-svc">Concept &amp; creative</div>
-        <p>The idea that makes someone stop and act. We shape the brief with Our Kid and test what lands.</p>
-        <div class="engine-card-tools"><span>Creative strategy</span><span>Creative testing</span></div>
-      </div>
-      <div class="engine-card">
-        <div class="engine-card-tag influenced">Influenced</div>
-        <h4>Retain</h4>
-        <div class="engine-card-svc">Donor development</div>
-        <p>Turning first-time donors into long-term supporters, advising and referring specialists where needed.</p>
-        <div class="engine-card-tools"><span>Donor journey strategy</span><span>Email programme</span></div>
-      </div>
-    </div>
-  </div>
-  <div class="slide-num">17 / 19</div>
-</section>
-
 <!-- ============ SLIDE 17 — Q3 roadmap ============ -->
 <section class="dk" id="s18" data-surface="dark">
   <div class="ey" style="margin-bottom:.5rem">Looking ahead — Q3 actions &amp; roadmap</div>
@@ -972,11 +912,11 @@ h2{font-size:clamp(1.8rem,3.8vw,3rem);font-weight:800;line-height:1.02;letter-sp
           <div class="roadmap-status kickoff">Kicking off</div>
         </div>
         <div class="roadmap-lane">
-          <div class="roadmap-range" style="left:15.4%;width:18.7%;background:rgba(204,255,0,.25)"></div>
-          <div class="roadmap-marker" style="left:15.4%;background:var(--volt)"></div>
-          <div class="roadmap-marker-lbl" style="left:15.4%"><strong>Mid-July</strong>Production begins</div>
+          <div class="roadmap-range" style="left:34.1%;width:15.4%;background:rgba(204,255,0,.25)"></div>
           <div class="roadmap-marker" style="left:34.1%;background:var(--volt)"></div>
-          <div class="roadmap-marker-lbl" style="left:34.1%"><strong>1 Aug</strong>Output ready</div>
+          <div class="roadmap-marker-lbl" style="left:34.1%"><strong>1 Aug</strong>Production begins</div>
+          <div class="roadmap-marker" style="left:49.5%;background:var(--volt)"></div>
+          <div class="roadmap-marker-lbl" style="left:49.5%"><strong>Mid-Aug</strong>Go live</div>
         </div>
       </div>
       <div class="roadmap-row">
@@ -1021,18 +961,43 @@ h2{font-size:clamp(1.8rem,3.8vw,3rem);font-weight:800;line-height:1.02;letter-sp
           <div class="roadmap-marker-lbl" style="left:0%;transform:none;text-align:left"><strong>Now</strong>Ideation / research</div>
           <div class="roadmap-marker" style="left:15.4%;background:var(--amber)"></div>
           <div class="roadmap-marker-lbl" style="left:15.4%"><strong>Mid-July</strong>Red Bullet briefing</div>
-          <div class="roadmap-range" style="left:20.9%;width:28.6%;background:rgba(201,122,58,.25)"></div>
-          <div class="roadmap-marker" style="left:49.5%;background:var(--amber)"></div>
-          <div class="roadmap-marker-lbl" style="left:49.5%"><strong>Mid-Aug</strong>Go live <span style="color:var(--muted);font-weight:600">(3–6wk build)</span></div>
+          <div class="roadmap-range" style="left:20.9%;width:62.6%;background:rgba(201,122,58,.25)"></div>
+          <div class="roadmap-marker" style="left:83.5%;background:var(--amber)"></div>
+          <div class="roadmap-marker-lbl" style="left:83.5%"><strong>Mid–end Sept</strong>Go live</div>
         </div>
       </div>
+    </div>
+  </div>
+  <div class="slide-num">17 / 19</div>
+</section>
+
+<!-- ============ SLIDE 17b — Campaign framework pillars ============ -->
+<section class="dk" id="s19" data-surface="dark">
+  <div class="ey">Q3 campaign framework</div>
+  <h2>Shaping the brief <span class="red">together.</span></h2>
+  <p class="body perf-intro">Every campaign that works stands on the same three pillars. We hold this space to shape the Q3 brief together, because getting all three right is what makes it succeed.</p>
+  <div class="apart">
+    <div class="ap ap-r" data-n="01">
+      <div class="ap-n">PILLAR ONE</div>
+      <h3 class="red">Audience</h3>
+      <p></p>
+    </div>
+    <div class="ap ap-t" data-n="02">
+      <div class="ap-n">PILLAR TWO</div>
+      <h3 style="color:var(--teal)">Message</h3>
+      <p></p>
+    </div>
+    <div class="ap ap-a" data-n="03">
+      <div class="ap-n">PILLAR THREE</div>
+      <h3 style="color:var(--amber)">Journey</h3>
+      <p></p>
     </div>
   </div>
   <div class="slide-num">18 / 19</div>
 </section>
 
 <!-- ============ SLIDE 18 — Section intro: Our Kid ============ -->
-<section class="ok-divider" id="s19" data-surface="dark">
+<section class="ok-divider" id="s20" data-surface="dark">
   <div class="our-kid-word">our kid</div>
   <h1>Creative<br>Kick-off session</h1>
   <div class="slide-num" style="color:rgba(204,255,0,.45)">19 / 19</div>
