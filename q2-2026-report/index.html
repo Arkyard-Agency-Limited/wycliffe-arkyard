@@ -338,6 +338,13 @@ h2{font-size:clamp(1.8rem,3.8vw,3rem);font-weight:800;line-height:1.02;letter-sp
 @keyframes pillarPulse{0%,100%{opacity:1;transform:translateY(-50%) scale(1)}50%{opacity:.35;transform:translateY(-50%) scale(1.55)}}
 .ap h3{font-size:1.05rem;font-weight:800;margin-bottom:.65rem;line-height:1.15;letter-spacing:-.01em;position:relative}
 .ap p{font-size:.82rem;color:var(--mid);line-height:1.65;position:relative;min-height:8.5rem}
+.ap-note{cursor:text;outline:none;border-radius:6px;padding:.3rem .1rem;margin:0 -.1rem;transition:background .15s ease}
+.ap-note:hover{background:rgba(255,255,255,.03)}
+.ap-note:focus{background:rgba(255,255,255,.05)}
+.ap-note:empty::before{content:attr(data-placeholder);color:var(--muted);font-style:italic}
+.ap-r .ap-note:focus{box-shadow:inset 2px 0 0 var(--red)}
+.ap-t .ap-note:focus{box-shadow:inset 2px 0 0 var(--teal)}
+.ap-a .ap-note:focus{box-shadow:inset 2px 0 0 var(--amber)}
 .ap::before{animation:ghostBreathe 5s ease-in-out infinite}
 @keyframes ghostBreathe{0%,100%{opacity:.06}50%{opacity:.13}}
 @media (prefers-reduced-motion:reduce){
@@ -902,8 +909,8 @@ h2{font-size:clamp(1.8rem,3.8vw,3rem);font-weight:800;line-height:1.02;letter-sp
           <div class="roadmap-marker-lbl" style="left:0%;transform:none;text-align:left"><strong>June</strong><span class="tag-done">Brief completed</span></div>
           <div class="roadmap-marker" style="left:15.4%;background:var(--red)"></div>
           <div class="roadmap-marker-lbl" style="left:15.4%"><strong>Mid-July</strong>Production <span class="tag-delayed">Delayed</span></div>
-          <div class="roadmap-marker" style="left:34.1%;background:var(--red)"></div>
-          <div class="roadmap-marker-lbl" style="left:34.1%"><strong>1 Aug</strong>Campaign rollout</div>
+          <div class="roadmap-marker" style="left:49.5%;background:var(--red)"></div>
+          <div class="roadmap-marker-lbl" style="left:49.5%"><strong>Mid-Aug</strong>Campaign rollout</div>
         </div>
       </div>
       <div class="roadmap-row">
@@ -974,23 +981,23 @@ h2{font-size:clamp(1.8rem,3.8vw,3rem);font-weight:800;line-height:1.02;letter-sp
 <!-- ============ SLIDE 17b — Campaign framework pillars ============ -->
 <section class="dk" id="s19" data-surface="dark">
   <div class="ey">Q3 campaign framework</div>
-  <h2>Shaping the brief <span class="red">together.</span></h2>
-  <p class="body perf-intro">Every campaign that works stands on the same three pillars. We hold this space to shape the Q3 brief together, because getting all three right is what makes it succeed.</p>
+  <h2>Recruiting <span class="red">members.</span></h2>
+  <p class="body perf-intro">Every campaign that works stands on the same three pillars. We hold this space to shape the brief together, because getting all three right is what makes a campaign succeed.</p>
   <div class="apart">
     <div class="ap ap-r" data-n="01">
       <div class="ap-n">PILLAR ONE</div>
       <h3 class="red">Audience</h3>
-      <p></p>
+      <p class="ap-note" contenteditable="true" data-placeholder="Click to add notes…"></p>
     </div>
     <div class="ap ap-t" data-n="02">
       <div class="ap-n">PILLAR TWO</div>
       <h3 style="color:var(--teal)">Message</h3>
-      <p></p>
+      <p class="ap-note" contenteditable="true" data-placeholder="Click to add notes…"></p>
     </div>
     <div class="ap ap-a" data-n="03">
       <div class="ap-n">PILLAR THREE</div>
       <h3 style="color:var(--amber)">Journey</h3>
-      <p></p>
+      <p class="ap-note" contenteditable="true" data-placeholder="Click to add notes…"></p>
     </div>
   </div>
   <div class="slide-num">18 / 19</div>
@@ -1028,6 +1035,7 @@ h2{font-size:clamp(1.8rem,3.8vw,3rem);font-weight:800;line-height:1.02;letter-sp
     }, {threshold:0.5}).observe(s);
   });
   document.addEventListener('keydown', function(e){
+    if(e.target && e.target.isContentEditable) return;
     var a = dots.findIndex(function(d){ return d.classList.contains('on'); });
     if(e.key==='ArrowDown' && a<secs.length-1) secs[a+1].scrollIntoView({behavior:'smooth'});
     if(e.key==='ArrowUp' && a>0) secs[a-1].scrollIntoView({behavior:'smooth'});
