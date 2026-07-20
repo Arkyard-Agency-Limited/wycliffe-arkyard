@@ -325,6 +325,26 @@ h2{font-size:clamp(1.8rem,3.8vw,3rem);font-weight:800;line-height:1.02;letter-sp
 .pf-thresh-chip::before{content:'✓';color:var(--red);font-weight:800}
 .pf-note{font-size:.72rem;color:var(--muted);margin-top:1.2rem;max-width:900px;line-height:1.6}
 
+/* ── Growth Engine framework slide ── */
+.engine-wrap{max-width:1320px;margin-top:1.7rem;width:100%}
+.engine-outcome{background:rgba(232,64,64,.08);border:1px solid rgba(232,64,64,.28);border-radius:14px;padding:1.2rem 1.6rem;margin-bottom:1.2rem;display:flex;align-items:center;justify-content:space-between;gap:1.5rem;flex-wrap:wrap}
+.engine-outcome-txt{max-width:560px}
+.engine-outcome-label{font-size:.6rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--red)}
+.engine-outcome h3{font-size:1.35rem;margin:.3rem 0 .35rem;color:var(--off);font-weight:800}
+.engine-outcome p{font-size:.8rem;color:var(--mid);margin:0;line-height:1.5}
+.engine-outcome-tools{display:flex;flex-wrap:wrap;gap:.5rem;justify-content:flex-end;max-width:420px}
+.engine-outcome-tools span{font-size:.64rem;font-weight:700;background:rgba(232,64,64,.14);color:#ff8a8a;padding:.35rem .75rem;border-radius:20px;white-space:nowrap}
+.engine-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:.8rem}
+.engine-card{background:rgba(255,255,255,.03);border:1px solid var(--dkb);border-radius:12px;padding:.95rem 1rem;display:flex;flex-direction:column;gap:.4rem}
+.engine-card-tag{display:inline-flex;align-self:flex-start;font-size:.54rem;font-weight:800;letter-spacing:.05em;text-transform:uppercase;padding:.22rem .55rem;border-radius:20px}
+.engine-card-tag.owned{background:rgba(232,64,64,.14);color:#ff8a8a}
+.engine-card-tag.influenced{background:rgba(110,170,146,.16);color:#8fc7ae}
+.engine-card h4{font-size:.98rem;color:var(--off);margin:.1rem 0 0;font-weight:800}
+.engine-card-svc{font-size:.64rem;color:var(--muted);font-weight:700;margin-top:-.3rem}
+.engine-card p{font-size:.7rem;color:var(--mid);line-height:1.45;margin:0}
+.engine-card-tools{display:flex;flex-wrap:wrap;gap:.3rem;margin-top:.1rem}
+.engine-card-tools span{font-size:.58rem;color:var(--muted);background:rgba(255,255,255,.05);padding:.18rem .45rem;border-radius:10px}
+
 @media(max-width:760px){
   .split-cover{grid-template-columns:1fr}
   .kpi-grid{grid-template-columns:1fr}
@@ -335,6 +355,9 @@ h2{font-size:clamp(1.8rem,3.8vw,3rem);font-weight:800;line-height:1.02;letter-sp
   .perf-cols{grid-template-columns:1fr;gap:1.6rem}
   .perf-answer{grid-template-columns:1fr}
   .roadmap-top{flex-direction:column;align-items:flex-start;gap:.6rem}
+  .engine-grid{grid-template-columns:1fr}
+  .engine-outcome{flex-direction:column;align-items:flex-start}
+  .engine-outcome-tools{justify-content:flex-start;max-width:none}
 }
 </style>
 </head>
@@ -345,7 +368,7 @@ h2{font-size:clamp(1.8rem,3.8vw,3rem);font-weight:800;line-height:1.02;letter-sp
   <div class="nd"></div><div class="nd"></div><div class="nd"></div><div class="nd"></div>
   <div class="nd"></div><div class="nd"></div><div class="nd break" title="Lunch break"></div><div class="nd"></div>
   <div class="nd"></div><div class="nd"></div><div class="nd"></div><div class="nd"></div>
-  <div class="nd"></div><div class="nd"></div>
+  <div class="nd"></div><div class="nd"></div><div class="nd"></div>
 </div>
 
 <div class="wyc-badge" id="wycBadgeWhite"><?xml version="1.0" encoding="UTF-8"?>
@@ -382,7 +405,7 @@ h2{font-size:clamp(1.8rem,3.8vw,3rem);font-weight:800;line-height:1.02;letter-sp
       <p class="cover-sub">Setting the scene and a quick brainstorming workshop.</p>
     </div>
   </div>
-  <div class="slide-num">01 / 18</div>
+  <div class="slide-num">01 / 19</div>
 </section>
 
 <!-- ============ SLIDE 2 — Plan for the day ============ -->
@@ -416,14 +439,14 @@ h2{font-size:clamp(1.8rem,3.8vw,3rem);font-weight:800;line-height:1.02;letter-sp
       <div class="ag-body"><div class="ag-title">Social drink with the Wycliffe team!</div></div>
     </div>
   </div>
-  <div class="slide-num" style="color:var(--muted)">02 / 18</div>
+  <div class="slide-num" style="color:var(--muted)">02 / 19</div>
 </section>
 
 <!-- ============ SLIDE 3 — Section intro ============ -->
 <section class="dk" id="s3" data-surface="dark">
   <div class="ey">Arkyard</div>
   <h1>Q2 Performance<br>Review</h1>
-  <div class="slide-num">03 / 18</div>
+  <div class="slide-num">03 / 19</div>
 </section>
 
 <!-- ============ SLIDE 3 — Our KPIs ============ -->
@@ -450,7 +473,7 @@ h2{font-size:clamp(1.8rem,3.8vw,3rem);font-weight:800;line-height:1.02;letter-sp
       <div class="kpi-card-type grd">Target date</div>
     </div>
   </div>
-  <div class="slide-num" style="color:var(--muted)">04 / 18</div>
+  <div class="slide-num" style="color:var(--muted)">04 / 19</div>
 </section>
 
 <!-- ============ SLIDE 4 — Sliding metrics ============ -->
@@ -480,7 +503,7 @@ h2{font-size:clamp(1.8rem,3.8vw,3rem);font-weight:800;line-height:1.02;letter-sp
     </div>
   </div>
   <div class="reveal-hint">Click to reveal the next metric</div>
-  <div class="slide-num">05 / 18</div>
+  <div class="slide-num">05 / 19</div>
 </section>
 
 <!-- ============ SLIDE 5 — Donor pacing ============ -->
@@ -504,7 +527,7 @@ h2{font-size:clamp(1.8rem,3.8vw,3rem);font-weight:800;line-height:1.02;letter-sp
       <div class="pace-card-note">Needed every month to hit the target on time.</div>
     </div>
   </div>
-  <div class="slide-num">06 / 18</div>
+  <div class="slide-num">06 / 19</div>
 </section>
 
 <!-- ============ SLIDE 6 — Timeline chart ============ -->
@@ -585,7 +608,7 @@ h2{font-size:clamp(1.8rem,3.8vw,3rem);font-weight:800;line-height:1.02;letter-sp
     <div class="cl-item"><span class="cl-swatch" style="background:var(--volt)"></span>Donors acquired</div>
     <div class="cl-item cl-hint">Hover the chart for daily figures</div>
   </div>
-  <div class="slide-num">07 / 18</div>
+  <div class="slide-num">07 / 19</div>
 </section>
 
 <!-- ============ SLIDE 7 — Q1 vs Q2 vs Q3 ============ -->
@@ -632,7 +655,7 @@ h2{font-size:clamp(1.8rem,3.8vw,3rem);font-weight:800;line-height:1.02;letter-sp
     </div>
   </div>
   <p class="qcompare-note">Q3 is off to a strong start on efficiency: CVR (4%) and cost per donation (£35) are already the best of the year, and ROAS has climbed to 0.65 from 0.19 in Q1. Worth noting Q3 only reflects 12 days of spend, so totals like income and volume will take longer to catch up to a full quarter.</p>
-  <div class="slide-num" style="color:var(--muted)">08 / 18</div>
+  <div class="slide-num" style="color:var(--muted)">08 / 19</div>
 </section>
 
 <!-- ============ SLIDE 8 — What performed well: Creatives ============ -->
@@ -669,7 +692,7 @@ h2{font-size:clamp(1.8rem,3.8vw,3rem);font-weight:800;line-height:1.02;letter-sp
       </div>
     </div>
   </div>
-  <div class="slide-num">09 / 18</div>
+  <div class="slide-num">09 / 19</div>
 </section>
 
 <!-- ============ SLIDE 10 — What didn't perform well ============ -->
@@ -709,7 +732,7 @@ h2{font-size:clamp(1.8rem,3.8vw,3rem);font-weight:800;line-height:1.02;letter-sp
     </div>
   </div>
   <p class="perf-foot">Meta-reported website donations, 1 Apr – 30 Jun 2026, BAU Advantage+ ad set. Age, gender and platform splits are Meta's modelled estimates — read as direction, not exact counts. England absorbs the majority of spend; other UK nations are barely tested.</p>
-  <div class="slide-num">10 / 18</div>
+  <div class="slide-num">10 / 19</div>
 </section>
 
 <!-- ============ SLIDE 13 — Lunch break ============ -->
@@ -719,7 +742,7 @@ h2{font-size:clamp(1.8rem,3.8vw,3rem);font-weight:800;line-height:1.02;letter-sp
     <h1>Lunch time!</h1>
     <p class="lunch-sub">Grab some food &mdash; we'll pick back up with our Q3 creative testing plans shortly.</p>
   </div>
-  <div class="slide-num" style="color:var(--muted)">11 / 18</div>
+  <div class="slide-num" style="color:var(--muted)">11 / 19</div>
 </section>
 
 <!-- ============ SLIDE 9b — Multi-concept creative strategy ============ -->
@@ -750,7 +773,7 @@ h2{font-size:clamp(1.8rem,3.8vw,3rem);font-weight:800;line-height:1.02;letter-sp
       </div>
     </div>
   </div>
-  <div class="slide-num" style="color:var(--muted)">12 / 18</div>
+  <div class="slide-num" style="color:var(--muted)">12 / 19</div>
 </section>
 
 <!-- ============ SLIDE 14 — Spotify ============ -->
@@ -785,7 +808,7 @@ h2{font-size:clamp(1.8rem,3.8vw,3rem);font-weight:800;line-height:1.02;letter-sp
     <div class="pf-thresh-chip">GA4 lift, warm vs cold cell</div>
   </div>
   <p class="pf-note">Not judged on last-click donations &mdash; attribution stays directional while Findock is unresolved.</p>
-  <div class="slide-num">13 / 18</div>
+  <div class="slide-num">13 / 19</div>
 </section>
 
 <!-- ============ SLIDE 15 — YouTube ============ -->
@@ -815,7 +838,7 @@ h2{font-size:clamp(1.8rem,3.8vw,3rem);font-weight:800;line-height:1.02;letter-sp
     <div class="pf-thresh-chip">Directional cost per donation</div>
   </div>
   <p class="pf-note">Not judged on last-click alone in the first weeks &mdash; the donation signal firms up as tracking beds in.</p>
-  <div class="slide-num">14 / 18</div>
+  <div class="slide-num">14 / 19</div>
 </section>
 
 <!-- ============ SLIDE 12 — Creative production/refresh ============ -->
@@ -829,7 +852,7 @@ h2{font-size:clamp(1.8rem,3.8vw,3rem);font-weight:800;line-height:1.02;letter-sp
     <div class="focus-point"><div class="focus-point-mark">3</div><p>Feed learnings from each new concept test — <strong>People give to people</strong>, <strong>Did you know?</strong>, <strong>The content bridge</strong> — straight back into the next production batch.</p></div>
   </div>
   <p class="focus-close">This always-on cadence is what Our Kid will build against in this afternoon's creative session.</p>
-  <div class="slide-num" style="color:var(--muted)">15 / 18</div>
+  <div class="slide-num" style="color:var(--muted)">15 / 19</div>
 </section>
 
 <!-- ============ SLIDE 16 — New donation flow ============ -->
@@ -842,11 +865,68 @@ h2{font-size:clamp(1.8rem,3.8vw,3rem);font-weight:800;line-height:1.02;letter-sp
     <div class="focus-point"><div class="focus-point-mark">2</div><p>Prioritise the payment step specifically — the single biggest drop-off point identified in the donation form research.</p></div>
     <div class="focus-point"><div class="focus-point-mark">3</div><p>Sequence behind Wycliffe002 (the interactive slider) so the two experiments don't collide in testing.</p></div>
   </div>
-  <div class="slide-num" style="color:var(--muted)">16 / 18</div>
+  <div class="slide-num" style="color:var(--muted)">16 / 19</div>
+</section>
+
+<!-- ============ SLIDE 16b — How everything connects (Growth Engine) ============ -->
+<section class="dk" id="s17" data-surface="dark">
+  <div class="ey">Our approach</div>
+  <h2>How everything connects.</h2>
+  <p class="body perf-intro">Five levers, one outcome — here's how the parts of the Growth Engine we manage feed back into new donor growth.</p>
+  <div class="engine-wrap">
+    <div class="engine-outcome">
+      <div class="engine-outcome-txt">
+        <div class="engine-outcome-label">Primary outcome</div>
+        <h3>Mission impact</h3>
+        <p>Every decision points here: more people moved to support your mission, at lower cost, with higher lifetime value.</p>
+      </div>
+      <div class="engine-outcome-tools">
+        <span>Total donation revenue</span><span>Cost per acquired donor</span><span>Donor lifetime value</span><span>Retention rate</span>
+      </div>
+    </div>
+    <div class="engine-grid">
+      <div class="engine-card">
+        <div class="engine-card-tag owned">Arkyard owned</div>
+        <h4>Understand</h4>
+        <div class="engine-card-svc">Data &amp; measurement</div>
+        <p>GTM, GA4 and CRM data stitched together — so we know not just what clicked, but what gave and what stayed.</p>
+        <div class="engine-card-tools"><span>GA4 &amp; GTM</span><span>CRM integration</span><span>Looker Studio</span></div>
+      </div>
+      <div class="engine-card">
+        <div class="engine-card-tag owned">Arkyard owned</div>
+        <h4>Reach</h4>
+        <div class="engine-card-svc">Paid media</div>
+        <p>Right message, right people, right moment — paid social continuously iterated, Google Grants included.</p>
+        <div class="engine-card-tools"><span>Meta Ads</span><span>Google Ads</span><span>Google Grants</span></div>
+      </div>
+      <div class="engine-card">
+        <div class="engine-card-tag owned">Arkyard owned</div>
+        <h4>Convert</h4>
+        <div class="engine-card-svc">Conversion optimisation</div>
+        <p>Removing friction between caring and giving. Quant finds the drop-offs, research reveals the why.</p>
+        <div class="engine-card-tools"><span>Heuristic review</span><span>User testing</span><span>A/B experiments</span></div>
+      </div>
+      <div class="engine-card">
+        <div class="engine-card-tag influenced">Influenced</div>
+        <h4>Connect</h4>
+        <div class="engine-card-svc">Concept &amp; creative</div>
+        <p>The idea that makes someone stop and act. We shape the brief with Our Kid and test what lands.</p>
+        <div class="engine-card-tools"><span>Creative strategy</span><span>Creative testing</span></div>
+      </div>
+      <div class="engine-card">
+        <div class="engine-card-tag influenced">Influenced</div>
+        <h4>Retain</h4>
+        <div class="engine-card-svc">Donor development</div>
+        <p>Turning first-time donors into long-term supporters, advising and referring specialists where needed.</p>
+        <div class="engine-card-tools"><span>Donor journey strategy</span><span>Email programme</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="slide-num">17 / 19</div>
 </section>
 
 <!-- ============ SLIDE 17 — Q3 roadmap ============ -->
-<section class="dk" id="s17" data-surface="dark">
+<section class="dk" id="s18" data-surface="dark">
   <div class="ey" style="margin-bottom:.5rem">Looking ahead — Q3 actions &amp; roadmap</div>
   <h2 style="font-size:clamp(1.5rem,2.8vw,2.2rem);margin-bottom:0">Q3 actions list and roadmap.</h2>
   <div class="roadmap">
@@ -948,14 +1028,14 @@ h2{font-size:clamp(1.8rem,3.8vw,3rem);font-weight:800;line-height:1.02;letter-sp
       </div>
     </div>
   </div>
-  <div class="slide-num">17 / 18</div>
+  <div class="slide-num">18 / 19</div>
 </section>
 
 <!-- ============ SLIDE 18 — Section intro: Our Kid ============ -->
-<section class="ok-divider" id="s18" data-surface="dark">
+<section class="ok-divider" id="s19" data-surface="dark">
   <div class="our-kid-word">our kid</div>
   <h1>Creative<br>Kick-off session</h1>
-  <div class="slide-num" style="color:rgba(204,255,0,.45)">18 / 18</div>
+  <div class="slide-num" style="color:rgba(204,255,0,.45)">19 / 19</div>
 </section>
 
 <script>
