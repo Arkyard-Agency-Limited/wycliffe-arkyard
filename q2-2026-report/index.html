@@ -96,19 +96,19 @@ h2{font-size:clamp(1.8rem,3.8vw,3rem);font-weight:800;line-height:1.02;letter-sp
 
 /* ── Merged Arkyard x Our Kid title panels ── */
 .ay-panel{background:#F2EEE3;color:#0e0e0c;align-items:center;text-align:center}
-.ok-panel{background:#000;color:var(--volt);align-items:center;text-align:center}
+.ok-panel{background:#CCCCCC;color:#000;align-items:center;text-align:center}
 .ay-panel .cover-sub,.ok-panel .cover-sub{margin-left:auto;margin-right:auto}
 .ay-panel h1,.ok-panel h1{font-size:clamp(2.6rem,6vw,4.8rem)}
 .ay-panel h1{color:#0e0e0c}
-.ok-panel h1{color:var(--volt)}
+.ok-panel h1{color:#000}
 .ay-panel .cover-sub{color:rgba(14,14,12,.65)}
-.ok-panel .cover-sub{color:rgba(204,255,0,.65)}
+.ok-panel .cover-sub{color:rgba(0,0,0,.65)}
 .ay-logo-small{width:min(50%,190px);height:auto;margin-bottom:1.8rem}
-.ok-panel .our-kid-word{margin-bottom:1.4rem;color:var(--volt)}
-.ok-panel .our-kid-word span{color:rgba(204,255,0,.55)}
-.ok-divider{background:#000;color:var(--volt);align-items:center;text-align:center}
-.ok-divider h1{color:var(--volt)}
-.ok-divider .our-kid-word{color:var(--volt);margin-bottom:1.6rem}
+.ok-panel .our-kid-word{margin-bottom:1.4rem;color:#000}
+.ok-panel .our-kid-word span{color:rgba(0,0,0,.55)}
+.ok-divider{background:#CCCCCC;color:#000;align-items:center;text-align:center}
+.ok-divider h1{color:#000}
+.ok-divider .our-kid-word{color:#000;margin-bottom:1.6rem}
 
 .cover-sub{font-family:'Lexend',sans-serif;font-size:clamp(1rem,1.3vw,1.15rem);line-height:1.65;max-width:480px;color:var(--mid)}
 .volt .cover-sub{color:rgba(0,0,0,.72)}
@@ -351,6 +351,53 @@ h2{font-size:clamp(1.8rem,3.8vw,3rem);font-weight:800;line-height:1.02;letter-sp
   .ap-n::before,.ap::before{animation:none;opacity:1}
 }
 
+/* ── Our Kid creative session (Matt's slides) ── */
+.mk{background:#CCCCCC;color:#000}
+.mk h1,.mk h2,.mk h3{color:#000}
+.mk-black{background:#000;color:#fff}
+.mk-black h1,.mk-black h2,.mk-black h3{color:#fff}
+.mk-tag{display:inline-flex;align-items:center;justify-content:center;padding:.55rem 1.5rem;border:1px solid rgba(0,0,0,.55);border-radius:3px;font-family:'Courier New',ui-monospace,monospace;font-size:.68rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;margin-bottom:2.4rem;width:fit-content;color:rgba(0,0,0,.75)}
+.mk-black .mk-tag{border-color:rgba(255,255,255,.55);color:rgba(255,255,255,.8)}
+.mk-h1{font-size:clamp(2.6rem,6vw,4.6rem);font-weight:800;letter-spacing:-.02em;line-height:1.05;margin:0;text-transform:uppercase}
+.mk-h2{font-size:clamp(1.6rem,2.7vw,2.3rem);font-weight:800;letter-spacing:-.01em;margin:0 0 1.3rem;line-height:1.15}
+.mk-statement{font-size:clamp(1.25rem,2.15vw,1.85rem);font-weight:800;line-height:1.4;max-width:1150px;margin:0}
+.mk-body{font-size:.92rem;line-height:1.75;max-width:900px;color:rgba(0,0,0,.8)}
+.mk-body + .mk-body{margin-top:1.4rem}
+.mk-black .mk-body{color:rgba(255,255,255,.75)}
+.mk-lead{font-size:1rem;font-weight:800;line-height:1.5;max-width:900px;margin-bottom:1.6rem}
+.mk-tbl{width:100%;margin-top:1.4rem}
+.mk-row{display:grid;gap:.6rem 1.8rem;padding:.9rem 0;border-bottom:1px solid rgba(0,0,0,.14)}
+.mk-row:last-child{border-bottom:none}
+.mk-row.mk-head{font-weight:800;font-size:.7rem;text-transform:uppercase;letter-spacing:.05em;color:rgba(0,0,0,.55);border-bottom:2px solid rgba(0,0,0,.4);padding-bottom:.65rem}
+.mk-row > div{font-size:.85rem;line-height:1.55}
+.mk-tbl.cols-2 .mk-row{grid-template-columns:1fr 1fr}
+.mk-tbl.cols-2w .mk-row{grid-template-columns:.85fr 2.15fr}
+.mk-tbl.cols-3 .mk-row{grid-template-columns:.7fr 1.3fr 1.3fr}
+.mk-tbl.cols-4 .mk-row{grid-template-columns:.85fr 1fr 1fr 1fr}
+.mk-editable{cursor:text;outline:none;border-radius:5px;padding:.15rem .35rem;margin:-.15rem -.35rem;transition:background .15s ease}
+.mk-editable:hover{background:rgba(0,0,0,.05)}
+.mk-editable:focus{background:rgba(0,0,0,.08)}
+.mk-editable:empty::before{content:attr(data-placeholder);color:rgba(0,0,0,.4);font-style:italic}
+.mk-proxy{display:flex;align-items:center;gap:1.4rem;margin-top:1.6rem;max-width:1300px}
+.mk-proxy-src,.mk-proxy-dst{background:#fff;border:1px solid rgba(0,0,0,.18);border-radius:8px;padding:.9rem 1.2rem;font-size:.85rem;font-weight:700;text-align:center;flex-shrink:0}
+.mk-proxy-mid{display:flex;flex-direction:column;gap:.5rem;flex:1}
+.mk-proxy-node{background:#fff;border:1px solid rgba(0,0,0,.18);border-radius:6px;padding:.55rem 1rem;font-size:.78rem;font-weight:600;text-align:center}
+.mk-proxy-arrow{color:rgba(0,0,0,.3);font-size:1rem;flex-shrink:0}
+.mk-anim{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
+section.mk.in-view .mk-anim,section.mk-black.in-view .mk-anim{opacity:1;transform:none}
+.mk-anim.d1{transition-delay:.08s}
+.mk-anim.d2{transition-delay:.18s}
+.mk-anim.d3{transition-delay:.28s}
+.mk-anim.d4{transition-delay:.38s}
+@media (prefers-reduced-motion:reduce){
+  .mk-anim{opacity:1;transform:none;transition:none}
+}
+@media(max-width:900px){
+  .mk-tbl.cols-2 .mk-row,.mk-tbl.cols-2w .mk-row,.mk-tbl.cols-3 .mk-row,.mk-tbl.cols-4 .mk-row{grid-template-columns:1fr}
+  .mk-row.mk-head{display:none}
+  .mk-proxy{flex-direction:column;align-items:stretch}
+}
+
 @media(max-width:760px){
   .split-cover{grid-template-columns:1fr}
   .kpi-grid{grid-template-columns:1fr}
@@ -373,6 +420,10 @@ h2{font-size:clamp(1.8rem,3.8vw,3rem);font-weight:800;line-height:1.02;letter-sp
   <div class="nd"></div><div class="nd"></div><div class="nd break" title="Lunch break"></div><div class="nd"></div>
   <div class="nd"></div><div class="nd"></div><div class="nd"></div><div class="nd"></div>
   <div class="nd"></div><div class="nd"></div><div class="nd"></div>
+  <div class="nd"></div><div class="nd"></div><div class="nd"></div><div class="nd"></div>
+  <div class="nd"></div><div class="nd"></div><div class="nd"></div><div class="nd"></div>
+  <div class="nd"></div><div class="nd"></div><div class="nd"></div><div class="nd"></div>
+  <div class="nd"></div><div class="nd"></div><div class="nd"></div><div class="nd"></div>
 </div>
 
 <div class="wyc-badge" id="wycBadgeWhite"><?xml version="1.0" encoding="UTF-8"?>
@@ -409,7 +460,7 @@ h2{font-size:clamp(1.8rem,3.8vw,3rem);font-weight:800;line-height:1.02;letter-sp
       <p class="cover-sub">Setting the scene and a quick brainstorming workshop.</p>
     </div>
   </div>
-  <div class="slide-num">01 / 19</div>
+  <div class="slide-num">01 / 35</div>
 </section>
 
 <!-- ============ SLIDE 2 — Plan for the day ============ -->
@@ -443,14 +494,14 @@ h2{font-size:clamp(1.8rem,3.8vw,3rem);font-weight:800;line-height:1.02;letter-sp
       <div class="ag-body"><div class="ag-title">Social drink with the Wycliffe team!</div></div>
     </div>
   </div>
-  <div class="slide-num" style="color:var(--muted)">02 / 19</div>
+  <div class="slide-num" style="color:var(--muted)">02 / 35</div>
 </section>
 
 <!-- ============ SLIDE 3 — Section intro ============ -->
 <section class="dk" id="s3" data-surface="dark">
   <div class="ey">Arkyard</div>
   <h1>Q2 Performance<br>Review</h1>
-  <div class="slide-num">03 / 19</div>
+  <div class="slide-num">03 / 35</div>
 </section>
 
 <!-- ============ SLIDE 3 — Our KPIs ============ -->
@@ -477,7 +528,7 @@ h2{font-size:clamp(1.8rem,3.8vw,3rem);font-weight:800;line-height:1.02;letter-sp
       <div class="kpi-card-type grd">Target date</div>
     </div>
   </div>
-  <div class="slide-num" style="color:var(--muted)">04 / 19</div>
+  <div class="slide-num" style="color:var(--muted)">04 / 35</div>
 </section>
 
 <!-- ============ SLIDE 4 — Sliding metrics ============ -->
@@ -507,7 +558,7 @@ h2{font-size:clamp(1.8rem,3.8vw,3rem);font-weight:800;line-height:1.02;letter-sp
     </div>
   </div>
   <div class="reveal-hint">Click to reveal the next metric</div>
-  <div class="slide-num">05 / 19</div>
+  <div class="slide-num">05 / 35</div>
 </section>
 
 <!-- ============ SLIDE 5 — Donor pacing ============ -->
@@ -531,7 +582,7 @@ h2{font-size:clamp(1.8rem,3.8vw,3rem);font-weight:800;line-height:1.02;letter-sp
       <div class="pace-card-note">Needed every month to hit the target on time.</div>
     </div>
   </div>
-  <div class="slide-num">06 / 19</div>
+  <div class="slide-num">06 / 35</div>
 </section>
 
 <!-- ============ SLIDE 6 — Timeline chart ============ -->
@@ -612,7 +663,7 @@ h2{font-size:clamp(1.8rem,3.8vw,3rem);font-weight:800;line-height:1.02;letter-sp
     <div class="cl-item"><span class="cl-swatch" style="background:var(--volt)"></span>Donors acquired</div>
     <div class="cl-item cl-hint">Hover the chart for daily figures</div>
   </div>
-  <div class="slide-num">07 / 19</div>
+  <div class="slide-num">07 / 35</div>
 </section>
 
 <!-- ============ SLIDE 7 — Q1 vs Q2 vs Q3 ============ -->
@@ -659,7 +710,7 @@ h2{font-size:clamp(1.8rem,3.8vw,3rem);font-weight:800;line-height:1.02;letter-sp
     </div>
   </div>
   <p class="qcompare-note">Q3 is off to a strong start on efficiency: CVR (4%) and cost per donation (£35) are already the best of the year, and ROAS has climbed to 0.65 from 0.19 in Q1. Worth noting Q3 only reflects 12 days of spend, so totals like income and volume will take longer to catch up to a full quarter.</p>
-  <div class="slide-num" style="color:var(--muted)">08 / 19</div>
+  <div class="slide-num" style="color:var(--muted)">08 / 35</div>
 </section>
 
 <!-- ============ SLIDE 8 — What performed well: Creatives ============ -->
@@ -696,7 +747,7 @@ h2{font-size:clamp(1.8rem,3.8vw,3rem);font-weight:800;line-height:1.02;letter-sp
       </div>
     </div>
   </div>
-  <div class="slide-num">09 / 19</div>
+  <div class="slide-num">09 / 35</div>
 </section>
 
 <!-- ============ SLIDE 10 — What didn't perform well ============ -->
@@ -736,7 +787,7 @@ h2{font-size:clamp(1.8rem,3.8vw,3rem);font-weight:800;line-height:1.02;letter-sp
     </div>
   </div>
   <p class="perf-foot">Meta-reported website donations, 1 Apr – 30 Jun 2026, BAU Advantage+ ad set. Age, gender and platform splits are Meta's modelled estimates — read as direction, not exact counts. England absorbs the majority of spend; other UK nations are barely tested.</p>
-  <div class="slide-num">10 / 19</div>
+  <div class="slide-num">10 / 35</div>
 </section>
 
 <!-- ============ SLIDE 13 — Lunch break ============ -->
@@ -745,7 +796,7 @@ h2{font-size:clamp(1.8rem,3.8vw,3rem);font-weight:800;line-height:1.02;letter-sp
     <div class="ey">Back at 12:30pm</div>
     <h1>Lunch time!</h1>
   </div>
-  <div class="slide-num" style="color:var(--muted)">11 / 19</div>
+  <div class="slide-num" style="color:var(--muted)">11 / 35</div>
 </section>
 
 <!-- ============ SLIDE 9b — Multi-concept creative strategy ============ -->
@@ -776,7 +827,7 @@ h2{font-size:clamp(1.8rem,3.8vw,3rem);font-weight:800;line-height:1.02;letter-sp
       </div>
     </div>
   </div>
-  <div class="slide-num" style="color:var(--muted)">12 / 19</div>
+  <div class="slide-num" style="color:var(--muted)">12 / 35</div>
 </section>
 
 <!-- ============ SLIDE 14 — Spotify ============ -->
@@ -811,7 +862,7 @@ h2{font-size:clamp(1.8rem,3.8vw,3rem);font-weight:800;line-height:1.02;letter-sp
     <div class="pf-thresh-chip">GA4 lift, warm vs cold cell</div>
   </div>
   <p class="pf-note">Not judged on last-click donations &mdash; attribution stays directional while Findock is unresolved.</p>
-  <div class="slide-num">13 / 19</div>
+  <div class="slide-num">13 / 35</div>
 </section>
 
 <!-- ============ SLIDE 15 — YouTube ============ -->
@@ -841,7 +892,7 @@ h2{font-size:clamp(1.8rem,3.8vw,3rem);font-weight:800;line-height:1.02;letter-sp
     <div class="pf-thresh-chip">Directional cost per donation</div>
   </div>
   <p class="pf-note">Not judged on last-click alone in the first weeks &mdash; the donation signal firms up as tracking beds in.</p>
-  <div class="slide-num">14 / 19</div>
+  <div class="slide-num">14 / 35</div>
 </section>
 
 <!-- ============ SLIDE 12 — Creative production/refresh ============ -->
@@ -855,7 +906,7 @@ h2{font-size:clamp(1.8rem,3.8vw,3rem);font-weight:800;line-height:1.02;letter-sp
     <div class="focus-point"><div class="focus-point-mark">3</div><p>Feed learnings from each new concept test — <strong>People give to people</strong>, <strong>Did you know?</strong>, <strong>The content bridge</strong> — straight back into the next production batch.</p></div>
   </div>
   <p class="focus-close">This always-on cadence is what Our Kid will build against in this afternoon's creative session.</p>
-  <div class="slide-num" style="color:var(--muted)">15 / 19</div>
+  <div class="slide-num" style="color:var(--muted)">15 / 35</div>
 </section>
 
 <!-- ============ SLIDE 16 — New donation flow ============ -->
@@ -868,7 +919,7 @@ h2{font-size:clamp(1.8rem,3.8vw,3rem);font-weight:800;line-height:1.02;letter-sp
     <div class="focus-point"><div class="focus-point-mark">2</div><p>Prioritise the payment step specifically — the single biggest drop-off point identified in the donation form research.</p></div>
     <div class="focus-point"><div class="focus-point-mark">3</div><p>Sequence behind Wycliffe002 (the interactive slider) so the two experiments don't collide in testing.</p></div>
   </div>
-  <div class="slide-num" style="color:var(--muted)">16 / 19</div>
+  <div class="slide-num" style="color:var(--muted)">16 / 35</div>
 </section>
 
 <!-- ============ SLIDE 17 — Q3 roadmap ============ -->
@@ -974,7 +1025,7 @@ h2{font-size:clamp(1.8rem,3.8vw,3rem);font-weight:800;line-height:1.02;letter-sp
       </div>
     </div>
   </div>
-  <div class="slide-num">17 / 19</div>
+  <div class="slide-num">17 / 35</div>
 </section>
 
 <!-- ============ SLIDE 17b — Campaign framework pillars ============ -->
@@ -999,15 +1050,227 @@ h2{font-size:clamp(1.8rem,3.8vw,3rem);font-weight:800;line-height:1.02;letter-sp
       <p class="ap-note" contenteditable="true" data-placeholder="Click to add notes…"></p>
     </div>
   </div>
-  <div class="slide-num">18 / 19</div>
+  <div class="slide-num">18 / 35</div>
 </section>
 
 <!-- ============ SLIDE 18 — Section intro: Our Kid ============ -->
-<section class="ok-divider" id="s20" data-surface="dark">
+<section class="ok-divider" id="s20" data-surface="light">
   <div class="our-kid-word">our kid</div>
   <h1>Creative<br>Kick-off session</h1>
-  <div class="slide-num" style="color:rgba(204,255,0,.45)">19 / 19</div>
+  <div class="slide-num" style="color:rgba(0,0,0,.45)">19 / 35</div>
 </section>
+
+
+<!-- ============ MATT 1 — Roadmap Activation ============ -->
+<section class="mk" id="s21" data-surface="light">
+  <div class="mk-tag mk-anim">Start</div>
+  <h1 class="mk-h1 mk-anim d1">Roadmap<br>Activation</h1>
+  <div class="slide-num" style="color:rgba(0,0,0,.45)">20 / 35</div>
+</section>
+
+
+<!-- ============ MATT 2 — Integrated Arkyard Creative Briefs ============ -->
+<section class="mk" id="s22" data-surface="light">
+  <div class="mk-tag mk-anim">Start</div>
+  <h1 class="mk-h1 mk-anim d1">Integrated Arkyard<br>Creative Briefs</h1>
+  <div class="slide-num" style="color:rgba(0,0,0,.45)">21 / 35</div>
+</section>
+
+
+<!-- ============ MATT 3 — The Scene ============ -->
+<section class="mk" id="s23" data-surface="light">
+  <div class="mk-tag mk-anim">The Scene</div>
+  <p class="mk-body mk-anim d1">Today is about turning Q2 performance into a sharper creative system for Q3.</p>
+  <p class="mk-body mk-anim d2">Arkyard has shown what the paid account needs next: more fresh creative, more often, designed around the audiences and formats showing the biggest opportunity. Our Kid&rsquo;s job is to help turn that into an always-on creative rhythm, not just a one-off production response</p>
+  <div class="slide-num" style="color:rgba(0,0,0,.45)">22 / 35</div>
+</section>
+
+
+<!-- ============ MATT 4 — The Scene: move from / to ============ -->
+<section class="mk" id="s24" data-surface="light">
+  <div class="mk-tag mk-anim">The Scene</div>
+  <div class="mk-tbl cols-2 mk-anim d1">
+    <div class="mk-row mk-head"><div>We need to move from&hellip;</div><div>To&hellip;</div></div>
+    <div class="mk-row"><div>Quarterly creative refreshes</div><div>New variants entering testing every few weeks</div></div>
+    <div class="mk-row"><div>Ads built around fixed messages</div><div>Creative built around audience behaviour and proof</div></div>
+    <div class="mk-row"><div>Paid as distribution</div><div>Paid as a learning and scaling engine</div></div>
+    <div class="mk-row"><div>Creator as execution</div><div>Creator / trusted voice as intelligence</div></div>
+    <div class="mk-row"><div>Performance results reviewed later</div><div>Learnings fed straight into the next batch</div></div>
+  </div>
+  <p class="mk-body mk-anim d2" style="margin-top:1.8rem">The answer is not simply more budget; it is a better creative cadence. Wycliffe needs a system where underperforming creative is retired, strong formats are multiplied, and each test teaches the next production sprint.</p>
+  <div class="slide-num" style="color:rgba(0,0,0,.45)">23 / 35</div>
+</section>
+
+
+<!-- ============ MATT 5 — Super Simple Brief statement ============ -->
+<section class="mk" id="s25" data-surface="light">
+  <div class="mk-tag mk-anim">Super Simple Brief</div>
+  <p class="mk-statement mk-anim d1">The strong videos are carrying the account. The opportunity is to build more creative for the people and placements we are missing.</p>
+  <div class="slide-num" style="color:rgba(0,0,0,.45)">24 / 35</div>
+</section>
+
+
+<!-- ============ MATT 6 — What must the next creative batch solve ============ -->
+<section class="mk" id="s26" data-surface="light">
+  <div class="mk-tag mk-anim">Super Simple Brief</div>
+  <h2 class="mk-h2 mk-anim d1">What must the next creative batch solve?</h2>
+  <div class="mk-anim d2" style="max-width:900px">
+    <div style="margin-bottom:1.3rem"><strong style="display:block;font-weight:800;margin-bottom:.15rem">Speak to the missing audiences</strong><span style="color:rgba(0,0,0,.75)">Women and 35-54 / 45-54 need more relevant creative routes.</span></div>
+    <div style="margin-bottom:1.3rem"><strong style="display:block;font-weight:800;margin-bottom:.15rem">Build for the cheapest inventory</strong><span style="color:rgba(0,0,0,.75)">Instagram and Reels need a constant supply of vertical-first, short-form content.</span></div>
+    <div style="margin-bottom:1.3rem"><strong style="display:block;font-weight:800;margin-bottom:.15rem">Multiply the trusted voice format</strong><span style="color:rgba(0,0,0,.75)">The data suggests people respond to people, not abstract cause messaging.</span></div>
+    <div style="margin-bottom:1.3rem"><strong style="display:block;font-weight:800;margin-bottom:.15rem">Create enough variation to learn</strong><span style="color:rgba(0,0,0,.75)">Each concept needs multiple hooks, voices, lengths, and CTAs.</span></div>
+  </div>
+  <p class="mk-body mk-anim d3">This is the creative brief hidden inside the performance review. The task is not just to make &ldquo;better ads.&rdquo; It is to create enough controlled variation to understand which audience, message, and journey combinations can lower acquisition cost.</p>
+  <div class="slide-num" style="color:rgba(0,0,0,.45)">25 / 35</div>
+</section>
+
+
+<!-- ============ MATT 7 — Provocation: social-first ============ -->
+<section class="mk" id="s27" data-surface="light">
+  <div class="mk-tag mk-anim">Provocation</div>
+  <p class="mk-statement mk-anim d1">Social-first does not mean abandoning brand-building fundamentals. It means modernising them for a world where brands are built by platforms, creators, communities, comments, search behaviours, and recommendation systems, not just by the assets a brand controls.</p>
+  <div class="slide-num" style="color:rgba(0,0,0,.45)">26 / 35</div>
+</section>
+
+
+<!-- ============ MATT 8 — Provocation: paid-first vs social-first ============ -->
+<section class="mk-black" id="s28" data-surface="dark">
+  <div class="mk-tag mk-anim">Provocation</div>
+  <div class="mk-anim d1" style="display:grid;grid-template-columns:1fr 1fr;gap:3rem;max-width:1400px;width:100%;align-items:start">
+    <div>
+      <p class="mk-body" style="color:rgba(255,255,255,.55);font-weight:600;margin-bottom:1.4rem">Often, paid-first approach&nbsp;is likely&nbsp;to start with:</p>
+      <p class="mk-body" style="color:rgba(255,255,255,.55)">&ldquo;What do we want to say, who do we target, and what asset do we put spend behind?&rdquo;</p>
+    </div>
+    <div>
+      <p class="mk-statement" style="color:#fff;font-size:clamp(1.2rem,2vw,1.7rem);margin-bottom:1.4rem">A social-first approach starts with:</p>
+      <p class="mk-statement" style="color:#fff;font-size:clamp(1.2rem,2vw,1.7rem)">&ldquo;What does the audience already care about, what proof do they need, who do they trust, and what kind of content would earn attention before we pay to scale it?&rdquo;</p>
+    </div>
+  </div>
+  <div class="slide-num" style="color:rgba(255,255,255,.4)">27 / 35</div>
+</section>
+
+
+<!-- ============ MATT 9 — Provocation: social as live system ============ -->
+<section class="mk" id="s29" data-surface="light">
+  <div class="mk-tag mk-anim">Provocation</div>
+  <p class="mk-statement mk-anim d1">Here&rsquo;s an idea to explore. What could paid become if the creative thinking starts as early as possible in social? The view is that social-first brand building is about marrying the fundamentals - distinctiveness, scale, and consistency - with the modern ways brands actually travel: through creators, communities, comments, search behaviours, and recommendation systems. For Wycliffe, the opportunity is to use social not just as a media channel, but as a live system for building relevance, proof, and memory.</p>
+  <div class="slide-num" style="color:rgba(0,0,0,.45)">28 / 35</div>
+</section>
+
+
+<!-- ============ MATT 10 — Provocation: paid creative system question ============ -->
+<section class="mk" id="s30" data-surface="light">
+  <div class="mk-tag mk-anim">Provocation</div>
+  <p class="mk-statement mk-anim d1">How do we build a paid creative system that uses social thinking to generate fresher, more trusted, more useful donor acquisition work every few weeks?</p>
+  <p class="mk-statement mk-anim d2" style="margin-top:2.2rem;font-size:clamp(1.05rem,1.7vw,1.4rem)">&ldquo;The output from today is not a final social strategy. It the start in developing a clear view of where Wycliffe has permission to play, what kinds of content could create value before paid amplifies them, and how we might operate across three speeds: relevance now, storytelling over time, and fame when it matters.&rdquo;</p>
+  <div class="slide-num" style="color:rgba(0,0,0,.45)">29 / 35</div>
+</section>
+
+
+<!-- ============ MATT 11 — Building Equity & Surfacing Evidence ============ -->
+<section class="mk" id="s31" data-surface="light">
+  <div class="mk-tag mk-anim">Provocation</div>
+  <h2 class="mk-h2 mk-anim d1">Building Equity &amp; Surfacing Evidence</h2>
+  <div class="mk-tbl cols-2 mk-anim d2">
+    <div class="mk-row mk-head"><div>Build equity</div><div>Surface evidence</div></div>
+    <div class="mk-row"><div>Make Wycliffe memorable and distinctive.</div><div>Make Wycliffe credible and easy to trust.</div></div>
+    <div class="mk-row"><div>Use repeated codes, voices, rituals, hooks, stories.</div><div>Use proof, people, answers, facts, community, outcomes.</div></div>
+    <div class="mk-row"><div>Help people feel why Bible translation matters.</div><div>Help people understand where their gift goes and why now.</div></div>
+  </div>
+  <p class="mk-body mk-anim d3" style="margin-top:1.8rem">The content people see today becomes the proof they remember, search for, and act on tomorrow.<br>The strongest Wycliffe content needs to do two jobs at once: build emotional memory and create proof. A trusted voice video can do both. A fact-led &ldquo;Did you know?&rdquo; asset can do both. A content bridge can do both if it gives people something useful before asking them to give.</p>
+  <div class="slide-num" style="color:rgba(0,0,0,.45)">30 / 35</div>
+</section>
+
+
+<!-- ============ MATT 12 — The Rise of Proxies ============ -->
+<section class="mk" id="s32" data-surface="light">
+  <div class="mk-tag mk-anim">Provocation</div>
+  <h2 class="mk-h2 mk-anim d1">The Rise of Proxies</h2>
+  <div class="mk-proxy mk-anim d2">
+    <div class="mk-proxy-src">Wycliffe</div>
+    <div class="mk-proxy-arrow">&rarr;</div>
+    <div class="mk-proxy-mid">
+      <div class="mk-proxy-node">Workers</div>
+      <div class="mk-proxy-node">Translators</div>
+      <div class="mk-proxy-node">Supporters</div>
+      <div class="mk-proxy-node">Church communities</div>
+      <div class="mk-proxy-node">Comments and questions</div>
+      <div class="mk-proxy-node">Social search</div>
+    </div>
+    <div class="mk-proxy-arrow">&rarr;</div>
+    <div class="mk-proxy-dst">Brand meaning</div>
+  </div>
+  <p class="mk-body mk-anim d3" style="margin-top:1.8rem">People do not just give to causes. They give to people, proof, and proximity.<br>Wycliffe&rsquo;s credibility can travel through workers, translators, supporters, churches, communities, comments, and search behaviour. That means the creative should not only feature the brand&rsquo;s official message. It should surface the humans and proof signals around the mission.</p>
+  <p class="mk-lead mk-anim d4" style="margin-top:1rem">As Arkyard&rsquo;s first Q3 concept stipulates: People give to people</p>
+  <div class="slide-num" style="color:rgba(0,0,0,.45)">31 / 35</div>
+</section>
+
+
+<!-- ============ MATT 13 — Three Speed Social for Wycliffe ============ -->
+<section class="mk" id="s33" data-surface="light">
+  <div class="mk-tag mk-anim">Workshop</div>
+  <h2 class="mk-h2 mk-anim d1">Three Speed Social for Wycliffe</h2>
+  <p class="mk-lead mk-anim d2">Real-time tells us what people care about. Short-lead turns it into repeatable formats. Long-lead turns it into bigger brand moments.</p>
+  <div class="mk-tbl cols-3 mk-anim d3">
+    <div class="mk-row mk-head"><div>Speed</div><div>Wycliffe role</div><div>Creative output</div></div>
+    <div class="mk-row"><div>Real-time</div><div>Learn from comments, questions, objections, and culture.</div><div>Fast hooks, response videos, community prompts, myth-busting clips.</div></div>
+    <div class="mk-row"><div>Short-lead</div><div>Build recurring donor acquisition formats.</div><div>Batch-produced face-to-camera films, vertical edits, creator / worker stories.</div></div>
+    <div class="mk-row"><div>Long-lead</div><div>Create bigger fame and fundraising moments.</div><div>Campaign platforms, partnerships, seasonal giving pushes, hero films.</div></div>
+  </div>
+  <p class="mk-body mk-anim d4" style="margin-top:1.8rem">Three Speed Social in a way that fits paid acquisition. For tomorrow, the main focus is short-lead: batch-produced, social-first creative every few weeks. But it should be fed by real-time insight and build towards bigger long-lead moments.</p>
+  <div class="slide-num" style="color:rgba(0,0,0,.45)">32 / 35</div>
+</section>
+
+
+<!-- ============ MATT 14 — Sharpen the Audience ============ -->
+<section class="mk" id="s34" data-surface="light">
+  <div class="mk-tag mk-anim">Workshop</div>
+  <h2 class="mk-h2 mk-anim d1">Sharpen the Audience</h2>
+  <p class="mk-lead mk-anim d2">Who are we making the next batch for?</p>
+  <div class="mk-tbl cols-4 mk-anim d3">
+    <div class="mk-row mk-head"><div>Audience</div><div>What might they need to believe?</div><div>What might be stopping them?</div><div>Who would they trust?</div></div>
+    <div class="mk-row"><div>Women</div><div class="mk-editable" contenteditable="true" data-placeholder="Click to add notes&hellip;"></div><div class="mk-editable" contenteditable="true" data-placeholder="Click to add notes&hellip;"></div><div class="mk-editable" contenteditable="true" data-placeholder="Click to add notes&hellip;"></div></div>
+    <div class="mk-row"><div>35-44</div><div class="mk-editable" contenteditable="true" data-placeholder="Click to add notes&hellip;"></div><div class="mk-editable" contenteditable="true" data-placeholder="Click to add notes&hellip;"></div><div class="mk-editable" contenteditable="true" data-placeholder="Click to add notes&hellip;"></div></div>
+    <div class="mk-row"><div>45-54</div><div class="mk-editable" contenteditable="true" data-placeholder="Click to add notes&hellip;"></div><div class="mk-editable" contenteditable="true" data-placeholder="Click to add notes&hellip;"></div><div class="mk-editable" contenteditable="true" data-placeholder="Click to add notes&hellip;"></div></div>
+    <div class="mk-row"><div>Instagram / Reels users</div><div class="mk-editable" contenteditable="true" data-placeholder="Click to add notes&hellip;"></div><div class="mk-editable" contenteditable="true" data-placeholder="Click to add notes&hellip;"></div><div class="mk-editable" contenteditable="true" data-placeholder="Click to add notes&hellip;"></div></div>
+  </div>
+  <p class="mk-body mk-anim d4" style="margin-top:1.6rem">What emotional barrier might be making this audience harder to convert?<br>What information gap might be stopping action?<br>What kind of person would they trust more than a brand ad?<br>What would make the cause feel close, specific, and urgent?</p>
+  <div class="slide-num" style="color:rgba(0,0,0,.45)">33 / 35</div>
+</section>
+
+
+<!-- ============ MATT 15 — Variants by Territory ============ -->
+<section class="mk" id="s35" data-surface="light">
+  <div class="mk-tag mk-anim">Workshop</div>
+  <h2 class="mk-h2 mk-anim d1">Variants by Territory</h2>
+  <p class="mk-lead mk-anim d2">Let&rsquo;s think about variants not just ideas</p>
+  <div class="mk-tbl cols-2w mk-anim d3">
+    <div class="mk-row mk-head"><div>Territory</div><div>Example creative prompt</div></div>
+    <div class="mk-row"><div>People give to people</div><div>&ldquo;I&rsquo;m [name], and I&rsquo;ve spent [x years] helping one community receive Scripture in their language. Here&rsquo;s what changes when the first verse is translated.&rdquo;</div></div>
+    <div class="mk-row"><div>Did you know?</div><div>&ldquo;Did you know 1 in 5 people still do not have the Bible in their language?&rdquo;</div></div>
+    <div class="mk-row"><div>The content bridge</div><div>&ldquo;Before you decide whether to give, read/watch this story of one community receiving Scripture for the first time.&rdquo;</div></div>
+  </div>
+  <div class="slide-num" style="color:rgba(0,0,0,.45)">34 / 35</div>
+</section>
+
+
+<!-- ============ MATT 16 — Make it Social First ============ -->
+<section class="mk" id="s36" data-surface="light">
+  <div class="mk-tag mk-anim">Workshop</div>
+  <h2 class="mk-h2 mk-anim d1">Make it Social First</h2>
+  <p class="mk-lead mk-anim d2">Would this work before we paid to scale it?</p>
+  <div class="mk-tbl cols-3 mk-anim d3">
+    <div class="mk-row mk-head"><div>Test</div><div>Question</div><div>Score 1-5</div></div>
+    <div class="mk-row"><div>Human</div><div>Does it feel like it comes from a person, not an institution?</div><div class="mk-editable" contenteditable="true" data-placeholder="Score&hellip;"></div></div>
+    <div class="mk-row"><div>Specific</div><div>Is there a named person, place, community, fact, or outcome?</div><div class="mk-editable" contenteditable="true" data-placeholder="Score&hellip;"></div></div>
+    <div class="mk-row"><div>Native</div><div>Does it feel right for vertical video / Reels / social feeds?</div><div class="mk-editable" contenteditable="true" data-placeholder="Score&hellip;"></div></div>
+    <div class="mk-row"><div>Useful or moving</div><div>Would someone watch, save, share, or remember it?</div><div class="mk-editable" contenteditable="true" data-placeholder="Score&hellip;"></div></div>
+    <div class="mk-row"><div>Scalable</div><div>Could paid amplify it without making it feel forced?</div><div class="mk-editable" contenteditable="true" data-placeholder="Score&hellip;"></div></div>
+  </div>
+  <p class="mk-body mk-anim d4" style="margin-top:1.8rem">This is where the Born Social lens becomes practical. A social-first paid ad should not feel like a campaign line forced into a feed. It should feel human, specific, native, and useful or emotionally resonant. If it scores low, improve it before spending behind it.</p>
+  <div class="slide-num" style="color:rgba(0,0,0,.45)">35 / 35</div>
+</section>
+
 
 <script>
 (function(){
@@ -1039,6 +1302,18 @@ h2{font-size:clamp(1.8rem,3.8vw,3rem);font-weight:800;line-height:1.02;letter-sp
     if(e.key==='ArrowDown' && a<secs.length-1) secs[a+1].scrollIntoView({behavior:'smooth'});
     if(e.key==='ArrowUp' && a>0) secs[a-1].scrollIntoView({behavior:'smooth'});
   });
+})();
+</script>
+<script>
+(function(){
+  var mkSecs = document.querySelectorAll('section.mk, section.mk-black');
+  if(!mkSecs.length) return;
+  var obs = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      entry.target.classList.toggle('in-view', entry.isIntersecting);
+    });
+  }, {threshold:0.35});
+  mkSecs.forEach(function(s){ obs.observe(s); });
 })();
 </script>
 <script>
